@@ -1,0 +1,20 @@
+{
+  "name": "AlgoVisualizer",
+  "version": "1.0.0",
+  "description": "A web app for visualizing common algorithms. Made with TypeScript, React, and Tailwind CSS.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryanloftus/AlgoVisualizer.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ryanloftus/AlgoVisualizer/issues"
+  },
+  "homepage": "https://github.com/ryanloftus/AlgoVisualizer#readme"
+}
