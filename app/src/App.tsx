@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
+import React, { ReactComponentElement, useState } from 'react';
 import logo from './logo.svg';
 import { Navbar } from './Components/Navbar';
+import { SortVisualizer } from './Components/SortVisualizer';
 
-const algorithmTypes = ["Sort", "Search", "Find Path"];
+const algorithmTypes: string[] = ["Sort", "Search", "Find Path"];
+const visualizerTypes: ReactComponentElement<any, any>[] = [<SortVisualizer />, <div />, <div />];
 
 function App() {
     const [algoTypeIdx, setAlgoTypeIdx] = useState(0);
@@ -12,8 +14,9 @@ function App() {
     }
 
     return (
-        <div className="App w-screen h-screen bg-slate-800 flex">
+        <div className="App w-screen h-screen bg-slate-800 grid grid-flow-rows auto-rows-max">
             <Navbar options={algorithmTypes} selectedOptionIdx={algoTypeIdx} selectOptionByIdx={selectAlgoTypeByIdx} />
+            {visualizerTypes[algoTypeIdx]}
         </div>
     );
 }
