@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import SortingAlgorithms from '../Algorithms/SortingAlgorithms';
+import performSortingAlgorithm from '../Algorithms/SortingAlgorithms';
 
 interface Props {}
 
@@ -13,7 +13,7 @@ export const SortVisualizer : React.FC<Props> = () => {
         setIsSorting(true);
         const newArray: number[] = Array.from({length: size}, () => Math.random());
         setArray(newArray);
-        SortingAlgorithms[algorithm](newArray, (arr: number[]) => setArray(arr));
+        performSortingAlgorithm(algorithm, newArray, (arr: number[]) => setArray(arr));
     }
 
     const barWidth: number = 100 / (size === 0 ? 1 : size);
@@ -30,6 +30,7 @@ export const SortVisualizer : React.FC<Props> = () => {
                     <option value="quickSort">Quick Sort</option>
                     <option value="insertionSort">Insertion Sort</option>
                     <option value="bubbleSort">Bubble Sort</option>
+                    <option value="radixSort">Radix Sort</option>
                 </select>
                 <button disabled={isSorting} onClick={startSort} className="bg-sky-900 text-slate-50 px-6 rounded border-solid border-2 border-sky-600 hover:border-slate-50 disabled:text-slate-300 disabled:border-slate-300">Sort</button>
             </div>
