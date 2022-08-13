@@ -13,7 +13,7 @@ export const SortVisualizer : React.FC<Props> = () => {
         setIsSorting(true);
         const newArray: number[] = Array.from({length: size}, () => Math.random());
         setArray(newArray);
-        performSortingAlgorithm(algorithm, newArray, (arr: number[]) => setArray(arr));
+        performSortingAlgorithm(algorithm, newArray, (arr: number[]) => setArray(arr), () => setIsSorting(false));
     }
 
     const barWidth: number = 100 / (size === 0 ? 1 : size);
