@@ -1,10 +1,9 @@
 import React, { ReactComponentElement, useState } from 'react';
-import logo from './logo.svg';
 import { Navbar } from './Components/Navbar';
 import { SortVisualizer } from './Components/SortVisualizer';
 
-const algorithmTypes: string[] = ["Sort", "Search", "Find Path"];
-const visualizerTypes: ReactComponentElement<any, any>[] = [<SortVisualizer />, <div />, <div />];
+const algorithmTypes: string[] = ["Sort", "Find Path"];
+const visualizerTypes: ReactComponentElement<any, any>[] = [<SortVisualizer />, <div><p className="text-center text-xl text-slate-50 m-8">Coming soon</p></div>];
 
 function App() {
     const [algoTypeIdx, setAlgoTypeIdx] = useState(0);
